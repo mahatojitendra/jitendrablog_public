@@ -1,0 +1,67 @@
+{% load humanize %}
+
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+        {% if subject %}
+          <h1>You are getting it.</h1>
+          <h1 class="display-1">{{ subject.title }}</h1>
+        {% else %}
+          <h1>Not getting it.</h1>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'study' %}">Stories</a>
+          </li>
+          <li class="breadcrumb-item active">{{ subject.title }}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Subject -->
+  <section id="listing" class="py-4">
+    <div class="container">
+      <hr>
+      <a href="{% url 'study' %}" class="btn btn-light mb-4">Back To Subjects</a>
+      <hr>
+    <div class="col-md-6 col-lg-12 mb-4">
+      <div class="card listing-preview">
+        <div class="card-body">
+          <div class="listing-heading text-center">
+            <h4 class="text-primary">{{ subject.title }}</h4>
+          </div>
+          <hr>
+          <div class="row py-2">
+            <div class="center">
+              {{ subject.description }}
+            </div>
+          </div>
+          <hr>
+          {% if subject.title == 'History' %}
+              <a href="#English" class="btn btn-primary btn-block">Click Here to Go to Subject Page</a>
+          {% elif subject.title == 'English' %}
+              <a href="#English" class="btn btn-primary btn-block">Click Here to Go to Subject Page</a>
+          {% elif subject.title == 'Computer Science' %}
+              <a href="{% url 'index_computer' %}" class="btn btn-primary btn-block">Click Here to Go to Subject Page</a>
+          {% else %}
+              <p class="btn btn-primary btn-block">No Link is available.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
