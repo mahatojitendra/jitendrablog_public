@@ -10,7 +10,7 @@
 
 - 💬 Ask me about **logic not code specific, maths if you stuck somewhere and mythology as I love it.**
 
-- 📫 How to reach me **at jitendra@jitendrablog.com or kumarjitendramahato@gmail.com**
+- 📫 How to reach me **at jitendra@jitendrablog.in or kumarjitendramahato@gmail.com**
 
 - ⚡ Fun fact **I think I am stupid but hey we are all in some way so enjoy who you are.**
 
